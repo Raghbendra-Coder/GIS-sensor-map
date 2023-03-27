@@ -1,0 +1,114 @@
+#map {
+    height: 80vh;
+    width: 100%;
+  }
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.primary-btn{
+  background-color: #047708;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px;
+  font-weight: bolder;
+  /* border-radius: 5px; */
+  box-shadow: 4px 2px 0 black;
+}
+.primary-btn:hover{
+  background-color: #024805;
+}
+
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  /*--webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));*/
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 180px;
+  background-color: #e2e2e2;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: "";
+}
+
+#close-button {
+  background-color: #e2e2e2;
+  border: none;
+  position: relative;
+  top: 0;
+  
+}
+
+.flex{
+  display: flex;
+}
+
+#popupcontent{
+  width: 100%;
+}
+
+
+#delete-btn{
+  background-color: #e2e2e2;
+  border: none;
+}
+
+#popup{
+  width: 300px;
+}
+
+#send-btn{
+  background-color: #024805;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+}
+input{
+  height: 25px;
+  width: 170px;
+  font-size: 1.2rem;
+  padding: 3px;
+}
