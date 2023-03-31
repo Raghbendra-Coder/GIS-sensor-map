@@ -1,0 +1,39 @@
+#map { height: 90vh; }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.primary-btn {
+    background-color: #047708;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px;
+    font-weight: bolder;
+    /* border-radius: 5px; */
+    box-shadow: 4px 2px 0 black;
+  }
+  .primary-btn:hover{
+    background-color: #024805;
+  }
+  
+  input{
+    height: 25px;
+    width: 170px;
+    font-size: 1.2rem;
+    padding: 3px;
+  }
+
+  #send-btn{
+    background-color: #024805;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+  }

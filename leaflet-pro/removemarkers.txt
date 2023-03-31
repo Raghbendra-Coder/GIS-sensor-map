@@ -1,0 +1,54 @@
+// Assume these are the initial marker locations
+const markersData = [
+  { nodeid: "NODE011", latitude: 51.505, longitude: -0.09 },
+  { nodeid: "NODE022", latitude: 51.507, longitude: -0.1 },
+  { nodeid: "NODE033", latitude: 51.509, longitude: -0.11 },
+  { nodeid: "NODE044", latitude: 51.511, longitude: -0.12 },
+  { nodeid: "NODE055", latitude: 51.513, longitude: -0.13 },
+];
+
+// Create an array to hold the markers
+const markers = [];
+
+// Add each marker to the map
+markersData.forEach((data) => {
+  const marker = L.marker([data.latitude, data.longitude]).addTo(map);
+  markers.push(marker);
+});
+
+// Assume this is the user input
+const nodeid = "NODE022";
+const latitude = 51.51;
+const longitude = -0.1;
+
+// Find the marker with the matching nodeid
+const matchingMarker = markers.find((marker) => {
+  const markerData = markersData.find((data) => data.nodeid === nodeid);
+  return markerData && marker.getLatLng().equals([markerData.latitude, markerData.longitude]);
+});
+
+if (matchingMarker) {
+  // Remove the old marker from the map
+  map.removeLayer(matchingMarker);
+
+  // Create a new marker with the updated coordinates
+  const newMarker = L.marker([latitude, longitude]).addTo(map);
+
+  // Add the new marker to the array of markers
+  const matchingIndex = markers.indexOf(matchingMarker);
+  markers[matchingIndex] = newMarker;
+}
+
+
+NODE1dfsdffs
+31.841491
+77.232323
+
+NODE2DSFMDSK
+26.841491
+74.231640
+
+NODE24343434
+30.111111
+75.111111
+
